@@ -31,3 +31,15 @@ if (didItRain8()) {
 else {
     console.log("It did not rain in the last 8 hours!");
 }
+//Just give me the temperature - Using the appropriate array method, start with the hourly data and return 
+//an array of only the temperatures. Your returned array should have the same number of elements as the original array.
+//Example output: [72.9, 70.5, ...]
+
+function gimmeTemps() {
+    return weatherData.hourly.data
+    .map(function(hourlyData) {
+        return hourlyData.temperature
+    })
+    
+}
+console.log(gimmeTemps());
