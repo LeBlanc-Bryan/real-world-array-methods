@@ -83,3 +83,13 @@ console.log(sunnyWeek());
 // what will be the hottest temperature today. As a hint, notice that you will need
 // to visit each item in turn, but also keep track of a separate value.
 
+function hottestHour() {
+    return weatherData.hourly.data
+    .reduce(function(hottest, hourlyData) {
+        if (hottest < hourlyData.temperature) {
+            hottest = hourlyData.temperature;
+        }
+        return hottest;
+    },0);
+}
+console.log(hottestHour());
